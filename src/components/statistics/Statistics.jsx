@@ -1,4 +1,4 @@
-// import { Notification } from '../notification/Notification';
+import css from './Statistics.module.css'
 
 export const Statistics = ({
   good,
@@ -8,7 +8,7 @@ export const Statistics = ({
   positivePercentage,
 }) => (
 <div>
-    <ul>
+    <ul className={css.statisticsList}>
       <li>Good: {good}</li>
       <li>Neutral: {neutral}</li>
       <li>Bad: {bad}</li>

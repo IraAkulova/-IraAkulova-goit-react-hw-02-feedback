@@ -31,7 +31,7 @@ export class App extends Component {
   };
 
   render() {
-    const total = this.total;
+    const total = this.countTotalFeedback();
     return (
       <div className="container">
         <Section title="Please leave feedback">

@@ -1,3 +1,5 @@
+import css from './FeedbackOptions.module.css'
+
 export const FeedbackOptions = ({
   onGood,
   onNeutral,
@@ -5,15 +7,23 @@ export const FeedbackOptions = ({
   options,
   onLeaveFeedback,
 }) => (
-    <div className="fedbackConteiner">
-      <ul>
-        {options.map(option => {return (
+  <div>
+    <ul className={css.fedbackList}>
+      {options.map(option => {
+        return (
           <li key={option}>
-            <button type="button" onClick={()=>{onLeaveFeedback(option)}}>
+            <button
+              className={css.option}
+              type="button"
+              onClick={() => {
+                onLeaveFeedback(option);
+              }}
+            >
               {option}
             </button>
           </li>
-        );})}
-      </ul>
-    </div>
+        );
+      })}
+    </ul>
+  </div>
 );
