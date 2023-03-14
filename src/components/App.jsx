@@ -32,7 +32,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.options}
@@ -41,14 +41,14 @@ export class App extends Component {
         </Section>
         <Section title="Statistics">
           {this.positivePercentage === 0 ?
-            <Notification message="There is no feedback"></Notification>:
-            <Statistics
+            (<Notification message="There is no feedback"></Notification>):
+            (<Statistics
             good={this.state.good}
             neutral={this.state.neutral}
             bad={this.state.bad}
             total={this.countTotalFeedback}
             positivePercentage={this.countPositiveFeedbackPercentage}
-          />}
+          />)}
         </Section>
       </div>
     );

@@ -5,7 +5,7 @@ export const FeedbackOptions = ({
   options,
   onLeaveFeedback,
 }) => (
-    <div>
+    <div className="fedbackConteiner">
       <ul>
         {options.map(option => {return (
           <li key={option}>
