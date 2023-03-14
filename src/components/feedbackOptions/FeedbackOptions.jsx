@@ -1,12 +1,7 @@
-import css from './FeedbackOptions.module.css'
+import PropTypes from 'prop-types';
+import css from './FeedbackOptions.module.css';
 
-export const FeedbackOptions = ({
-  onGood,
-  onNeutral,
-  onBad,
-  options,
-  onLeaveFeedback,
-}) => (
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <div>
     <ul className={css.fedbackList}>
       {options.map(option => {
@@ -27,3 +22,8 @@ export const FeedbackOptions = ({
     </ul>
   </div>
 );
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array,
+  onLeaveFeedback: PropTypes.func,
+};
